@@ -1,26 +1,44 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Projects from './Projects';
+import SocialProfiles from './SocialProfiles';
+import profile from './assets/profile.png';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super();
+    this.state = { displayBio: false };
+  }
+
+  toogleDisplayBio = () => {
+    this.setState({ displayBio: !this.state.displayBio });
+  }
+
+  render() {
+    return (
+      <div>
+        <img src={profile} alt='profile' className="profile"/>
+        <h1>Hello!</h1>
+        <p>My name is Ngoc Anh. I am a software engineer.</p>
+        <p>I'm alway looking forward to work on meaningfull projects.</p>
+        {
+          this.state.displayBio ? (
+            <div>
+              <p>I live in Thai Binh, Viet Nam.</p>
+              <p>My favorite language is Python but JavaScript is awesome too.</p>
+              <p>Besides coding, I also love music and noodles.</p>
+              <button onClick={this.toogleDisplayBio}>Show less</button>
+            </div>
+          ) : (
+            <button onClick={this.toogleDisplayBio}>Read More</button>
+          ) 
+        }
+        <hr />
+        <Projects />
+        <hr />
+        <SocialProfiles />
+      </div>
+    )
+  }
 }
 
 export default App;
