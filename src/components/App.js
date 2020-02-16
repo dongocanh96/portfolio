@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import profile from './assets/profile.png';
+import Title from './Title';
+import profile from '../assets/profile.png';
 
 class App extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class App extends Component {
         <img src={profile} alt='profile' className="profile"/>
         <h1>Hello!</h1>
         <p>My name is Ngoc Anh. I am a software engineer.</p>
+        <Title />
         <p>I'm alway looking forward to work on meaningfull projects.</p>
         {
           this.state.displayBio ? (
