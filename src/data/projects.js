@@ -7,7 +7,7 @@ const PROJECTS = [
     id: 1,
     title: 'Example React Application',
     description: 'A React App that i built, involing JS and core web development concept.',
-    link: 'https://github.com/dongocanh96/example',
+    link: 'https://github.com/dongocanh96/portfolio',
     image: project1
   },
   {
@@ -19,9 +19,9 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: 'Operating System Final Project',
-    description: 'My unique final project for my Operating System course.',
-    link: 'https://github.com/dongocanh96/example',
+    title: 'Simple Class Manager Web',
+    description: 'Simple web that i built with Python Flask framework',
+    link: 'https://github.com/dongocanh96/class_manager',
     image: project3
   }
 ];
